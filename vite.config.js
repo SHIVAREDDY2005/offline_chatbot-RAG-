@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+const repoBase = '/offline_chatbot-RAG-/'
+
 export default defineConfig({
+  base: repoBase,
   plugins: [vue()],
   server: {
     proxy: {
