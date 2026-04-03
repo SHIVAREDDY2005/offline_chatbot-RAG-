@@ -253,7 +253,8 @@ const processFile = async () => {
     audioUrl.value = resolveBackendUrl(res.data.audio_url)
   } catch (err) {
     console.error(err)
-    alert('Error processing file.')
+    const detail = err?.response?.data?.detail
+    alert(detail ? `Error processing file: ${detail}` : 'Error processing file.')
   }
 }
 </script>
